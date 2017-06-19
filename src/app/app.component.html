@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<div fxLayout="column" fxFlex [class.sharp-dark-theme]="darkTheme" [class.d3ess-dark-theme]="darkTheme">
+
+  <md-toolbar color="primary">
+    <button *ngIf="!sideNavOpen" md-icon-button (click)="sideNav.open(); sideNavOpen=true">
+        <md-icon>menu</md-icon>
+      </button>
+    <button *ngIf="sideNavOpen" md-icon-button (click)="sideNav.close(); sideNavOpen=false">
+        <md-icon>close</md-icon>
+      </button>
+    <span>
+      {{title}}
+    </span>
+  </md-toolbar>
+
+  <md-sidenav-container fxFlex>
+    <md-sidenav #sideNav mode="push" align="start">
+      <md-slide-toggle class="theme-toggle" color="accent" [checked]="darkTheme" (change)="toggleDarkTheme()">
+        Dark Theme
+      </md-slide-toggle>
+    </md-sidenav>
+
+    <div class="content" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="16px" fxLayoutAlign="start stretch">
+
+      <app-basic-animation-wrapper></app-basic-animation-wrapper>
+      <app-extended-animation-wrapper></app-extended-animation-wrapper>
+
+    </div>
+  </md-sidenav-container>
+</div>

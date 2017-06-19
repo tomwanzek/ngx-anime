@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  padding: 12px;
+}
+
+md-sidenav {
+  width: 320px;
+}
+
+.theme-toggle {
+  margin: 10px;
+}
+
+.swatch {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}

@@ -1,0 +1,10 @@
+<div class="animated-text">
+  <p>
+    Current State:
+  </p>
+  <md-chip-list>
+    <md-chip color="primary" selected="true">{{dataStatus.value}}</md-chip>
+    <md-chip [color]="color" selected="true" [@driven]="dataStatus" [style.opacity]="dataStatus.params.end">{{dataStatus.params.end}}</md-chip>
+    <md-chip [color]="color" selected="true" [@driven]="dataStatus" [style.opacity]="dataStatus.params.end">{{dataStatus.params.duration}}</md-chip>
+  </md-chip-list>
+</div>

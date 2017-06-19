@@ -1,0 +1,11 @@
+.animated-text {
+  height: 100px;
+  text-align: center;
+  font-style: italic;
+}
+
+md-chip {
+  max-width: 100px;
+  min-width: 50px;
+  text-align: center;
+}
