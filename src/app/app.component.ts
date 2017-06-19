@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'NG Animation Tests';
+  darkTheme: boolean = false;
+  sideNavOpen: boolean = false;
+
+  toggleDarkTheme() {
+    this.darkTheme = !this.darkTheme;
+  }
+
 }

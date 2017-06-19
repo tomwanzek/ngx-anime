@@ -1,0 +1,19 @@
+<md-card class="example-card">
+  <md-card-header>
+    <md-card-title>Extended</md-card-title>
+    <md-card-subtitle>
+      A data-driven animation using input parameters.
+    </md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <app-extended-animation
+      [opacity]="opacity"
+      [duration]="duration"
+      [color]="color"
+    ></app-extended-animation>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button color="primary" [disabled]="setting === 1" (click)="toSetting1()">SETTING 1</button>
+    <button md-button color="primary" [disabled]="setting === 2" (click)="toSetting2()">SETTING 2</button>
+  </md-card-actions>
+</md-card>
