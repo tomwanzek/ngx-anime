@@ -12,13 +12,24 @@ export class MultiExtendedAnimationWrapperComponent {
   duration: number = 2;
   durationStr: string = '2s'
   setting: 1 | 2;
-  multi: MultiDatum[] = [
-    {
-      id: 'Item 1',
-      opacity: 0.7,
-      color: 'accent'
-    }
-  ];
+  multi: MultiDatum[];
+
+  private item2: MultiDatum = {
+    id: 'Item 2',
+    opacity: 0.8,
+    color: 'primary'
+  };
+
+  constructor() {
+    this.multi = [
+      {
+        id: 'Item 1',
+        opacity: 0.7,
+        color: 'accent'
+      },
+      this.item2
+    ];
+  }
 
   toSetting1() {
     this.multi = [
@@ -27,22 +38,14 @@ export class MultiExtendedAnimationWrapperComponent {
         opacity: 0.3,
         color: 'accent'
       },
-      {
-        id: 'Item 2',
-        opacity: 0.8,
-        color: 'primary'
-      }
+      this.item2
     ];
     this.setting = 1;
   }
 
   toSetting2() {
     this.multi = [
-      {
-        id: 'Item 2',
-        opacity: 0.3,
-        color: 'accent'
-      },
+      this.item2,
       {
         id: 'Item 3',
         opacity: 0.5,

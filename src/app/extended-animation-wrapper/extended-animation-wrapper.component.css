@@ -2,6 +2,19 @@
   width: 300px;
 }
 
+.card-content {
+  height: 300px;
+}
+
+.state-text {
+  text-align: center;
+  font-style: italic;
+}
+
+.explanation {
+  text-align: justify;
+}
+
 .slider-label {
   margin-left: 10px;
   margin-right: 5px;
