@@ -10,7 +10,8 @@ import { OpacityType } from '../animations';
 })
 export class ExtendedAnimationWrapperComponent {
 
-  duration: string = '2s';
+  duration: number = 2;
+  durationStr: string = '2s';
   opacity: OpacityType = 1;
   color: 'accent' | 'warn' = 'accent';
   setting: 1 | 2;
@@ -27,4 +28,8 @@ export class ExtendedAnimationWrapperComponent {
     this.setting = 2;
   }
 
+  updateDuration(event) {
+    this.duration = event.value
+    this.durationStr = `${this.duration}s`;
+  }
 }

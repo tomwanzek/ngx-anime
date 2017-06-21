@@ -21,4 +21,8 @@
     <button md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">FADE IN</button>
     <button md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">FADE OUT</button>
   </md-card-actions>
+  <md-card-actions>
+    <span class="slider-label">Duration (s): </span>
+    <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+  </md-card-actions>
 </md-card>

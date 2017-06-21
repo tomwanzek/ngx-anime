@@ -1,16 +1,15 @@
 <md-card class="example-card">
   <md-card-header>
-    <md-card-title>Extended</md-card-title>
+    <md-card-title>Extended Multi</md-card-title>
     <md-card-subtitle>
-      A data-driven animation using input parameters.
+      A data-driven animation for multiple items using input parameters.
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <app-extended-animation
-      [opacity]="opacity"
+    <app-multi-extended-animation
+      [multi]="multi"
       [duration]="durationStr"
-      [color]="color"
-    ></app-extended-animation>
+    ></app-multi-extended-animation>
   </md-card-content>
   <md-card-actions>
     <button md-button color="primary" [disabled]="setting === 1" (click)="toSetting1()">SETTING 1</button>

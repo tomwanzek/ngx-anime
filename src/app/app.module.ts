@@ -11,6 +11,7 @@ import {
   MdIconModule,
   MdSidenavModule,
   MdSlideToggleModule,
+  MdSliderModule,
   MdToolbarModule
 } from '@angular/material';
 import 'hammerjs';
@@ -19,13 +20,17 @@ import { AppComponent } from './app.component';
 import { BasicAnimationWrapperComponent } from './basic-animation-wrapper/basic-animation-wrapper.component';
 import { ExtendedAnimationWrapperComponent } from './extended-animation-wrapper/extended-animation-wrapper.component';
 import { ExtendedAnimationComponent } from './extended-animation/extended-animation.component';
+import { MultiExtendedAnimationWrapperComponent } from './multi-extended-animation-wrapper/multi-extended-animation-wrapper.component';
+import { MultiExtendedAnimationComponent } from './multi-extended-animation/multi-extended-animation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicAnimationWrapperComponent,
     ExtendedAnimationWrapperComponent,
-    ExtendedAnimationComponent
+    ExtendedAnimationComponent,
+    MultiExtendedAnimationWrapperComponent,
+    MultiExtendedAnimationComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { ExtendedAnimationComponent } from './extended-animation/extended-animat
     MdIconModule,
     MdSidenavModule,
     MdSlideToggleModule,
+    MdSliderModule,
     MdToolbarModule
   ],
   providers: [],
