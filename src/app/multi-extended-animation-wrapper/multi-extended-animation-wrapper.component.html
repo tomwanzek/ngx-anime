@@ -1,22 +1,38 @@
 <md-card class="example-card">
   <md-card-header>
-    <md-card-title>Extended Multi</md-card-title>
+    <md-card-title>Multiple Items</md-card-title>
     <md-card-subtitle>
-      A data-driven animation for multiple items using input parameters.
+      Another animation driven by component input.
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <app-multi-extended-animation
-      [multi]="multi"
-      [duration]="durationStr"
-    ></app-multi-extended-animation>
+    <div class="card-content">
+      <p class="explanation">
+        This animation depends on component inputs and their change detection. Animation input parameters for element <i>opacity</i> and animation <i>duration</i> have
+        a continuous state space, but the animation uses only one "named discrete space" <b>data</b>.
+      </p>
+      <p class="explanation">
+        The component input has a <i>multi</i> input which accepts an array with item properties controling item ID, color and opacity. Animation duration is controlled through
+        a separate <i>duration</i> input, which applies to all items.
+      </p>
+      <p class="explanation">
+        While opacity changes trigger the animation, duration changes do not trigger the animation. A changed duration will only take effect for the next animation.
+      </p>
+      <p class="state-text">
+        Current State:
+      </p>
+      <app-multi-extended-animation
+        [multi]="multi"
+        [duration]="durationStr"
+      ></app-multi-extended-animation>
+    </div>
   </md-card-content>
   <md-card-actions>
     <button md-button color="primary" [disabled]="setting === 1" (click)="toSetting1()">SETTING 1</button>
     <button md-button color="primary" [disabled]="setting === 2" (click)="toSetting2()">SETTING 2</button>
   </md-card-actions>
   <md-card-actions>
-    <span class="slider-label">Duration (s): </span>
+    <span class="slider-label">Duration (seconds): </span>
     <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
   </md-card-actions>
 </md-card>

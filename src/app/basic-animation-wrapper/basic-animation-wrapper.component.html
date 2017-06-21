@@ -1,13 +1,20 @@
 <md-card class="example-card">
   <md-card-header>
-    <md-card-title>Basic</md-card-title>
+    <md-card-title>Fade In/Out</md-card-title>
     <md-card-subtitle>
       A basic animation using input parameters.
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <div class="animated-text">
-      <p>
+    <div class="card-content">
+      <p class="explanation">
+        This basic animation uses animation input parameters for element opacity and animation duration.
+        The animation uses two discrete states <b>in</b> and <b>out</b>.
+      </p>
+      <p class="explanation">
+        While opacity changes trigger the animation, duration changes do not trigger the animation. A changed duration will only take effect for the next animation.
+      </p>
+      <p class="state-text">
         Current State:
       </p>
       <md-chip-list>
@@ -22,7 +29,7 @@
     <button md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">FADE OUT</button>
   </md-card-actions>
   <md-card-actions>
-    <span class="slider-label">Duration (s): </span>
+    <span class="slider-label">Duration (seconds): </span>
     <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
   </md-card-actions>
 </md-card>
