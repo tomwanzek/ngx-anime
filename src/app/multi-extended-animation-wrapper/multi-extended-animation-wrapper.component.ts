@@ -48,8 +48,8 @@ const data3: MultiDatum[] = [
 })
 export class MultiExtendedAnimationWrapperComponent {
 
-  duration: number = 2;
-  durationStr: string = '2s'
+  duration = 2;
+  durationStr = '2s'
   data: 1 | 2 | 3;
   multi: MultiDatum[];
 

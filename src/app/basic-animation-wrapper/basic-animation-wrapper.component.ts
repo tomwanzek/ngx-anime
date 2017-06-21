@@ -13,7 +13,7 @@ import {
 })
 export class BasicAnimationWrapperComponent {
 
-  duration: number = 5;
+  duration = 5;
 
   fadeStatus: FadeStatus = {
     value: 'in',

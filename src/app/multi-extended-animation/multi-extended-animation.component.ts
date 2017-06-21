@@ -37,7 +37,7 @@ interface ExtendedDataStatus {
 export class MultiExtendedAnimationComponent implements OnChanges {
 
   @Input() multi: MultiDatum[] = [];
-  @Input() duration: string = '1s';
+  @Input() duration = '1s';
 
   dataStates: ExtendedDataStatus[] = [];
 
@@ -48,17 +48,17 @@ export class MultiExtendedAnimationComponent implements OnChanges {
     let eds: ExtendedDataStatus[] = [];
 
     if (changes['multi']) {
-      let previousMulti: MultiDatum[] = changes['multi'].previousValue ? changes['multi'].previousValue : [];
-      let currentMulti: MultiDatum[] = changes['multi'].currentValue ? changes['multi'].currentValue : [];
-      let previousId2Index: { [key: string]: number } = {};
-      let dataStatesId2Index: { [key: string]: number } = {};
+      const previousMulti: MultiDatum[] = changes['multi'].previousValue ? changes['multi'].previousValue : [];
+      const currentMulti: MultiDatum[] = changes['multi'].currentValue ? changes['multi'].currentValue : [];
+      const previousId2Index: { [key: string]: number } = {};
+      const dataStatesId2Index: { [key: string]: number } = {};
 
       previousMulti.forEach((m, i) => { previousId2Index[m.id] = i });
       this.dataStates.forEach((ds, i) => { dataStatesId2Index[ds.id] = i });
       eds = currentMulti.map<ExtendedDataStatus>(m => {
-        let id: string = m.id;
+        const id: string = m.id;
         let ds: ExtendedDataStatus;
-        let pId = previousId2Index[id];
+        const pId = previousId2Index[id];
         if (pId !== undefined) {
           if (previousMulti[pId] === m) {
             ds = this.dataStates[dataStatesId2Index[id]];
