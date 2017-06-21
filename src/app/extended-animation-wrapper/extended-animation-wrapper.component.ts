@@ -13,8 +13,8 @@ import {
 })
 export class ExtendedAnimationWrapperComponent {
 
-  duration: number = 2;
-  durationStr: string = '2s';
+  duration = 2;
+  durationStr = '2s';
   opacity: OpacityType = 1;
   color: MaterialColor = 'accent';
   data: 1 | 2;

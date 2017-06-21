@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NG Animation Tests';
-  darkTheme: boolean = false;
-  sideNavOpen: boolean = false;
+  darkTheme = false;
+  sideNavOpen = false;
 
   toggleDarkTheme() {
     this.darkTheme = !this.darkTheme;
