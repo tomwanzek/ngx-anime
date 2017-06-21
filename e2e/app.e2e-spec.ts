@@ -1,14 +1,14 @@
 import { NgxAnimePage } from './app.po';
 
-describe('ngx-anime App', () => {
+xdescribe('ngx-anime App', () => {
   let page: NgxAnimePage;
 
   beforeEach(() => {
     page = new NgxAnimePage();
   });
 
-  it('should display message saying app works', () => {
+  xit('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
