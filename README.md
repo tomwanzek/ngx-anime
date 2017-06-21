@@ -3,7 +3,7 @@
 This repo contains a slightly-more-than-minimally viable demo of Angular animation using input parameters.
 It relies on features introduced with Angular 4.2.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
 ## Development server
 
