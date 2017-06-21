@@ -14,18 +14,18 @@ export class ExtendedAnimationWrapperComponent {
   durationStr: string = '2s';
   opacity: OpacityType = 1;
   color: 'accent' | 'warn' = 'accent';
-  setting: 1 | 2;
+  data: 1 | 2;
 
-  toSetting1() {
+  toData1() {
     this.opacity = 0.7;
     this.color = 'accent';
-    this.setting = 1;
+    this.data = 1;
   }
 
-  toSetting2() {
+  toData2() {
     this.opacity = 0.3;
     this.color = 'warn';
-    this.setting = 2;
+    this.data = 2;
   }
 
   updateDuration(event) {
