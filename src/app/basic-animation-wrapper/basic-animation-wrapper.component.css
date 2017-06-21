@@ -3,7 +3,7 @@
 }
 
 .animated-text {
-  height: 100px;
+  height: 150px;
   text-align: center;
   font-style: italic;
 }
@@ -12,4 +12,11 @@ md-chip {
   max-width: 100px;
   min-width: 50px;
   text-align: center;
+}
+
+.slider-label {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  font-style: italic;
 }

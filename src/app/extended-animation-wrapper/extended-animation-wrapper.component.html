@@ -8,12 +8,16 @@
   <md-card-content>
     <app-extended-animation
       [opacity]="opacity"
-      [duration]="duration"
+      [duration]="durationStr"
       [color]="color"
     ></app-extended-animation>
   </md-card-content>
   <md-card-actions>
     <button md-button color="primary" [disabled]="setting === 1" (click)="toSetting1()">SETTING 1</button>
     <button md-button color="primary" [disabled]="setting === 2" (click)="toSetting2()">SETTING 2</button>
+  </md-card-actions>
+  <md-card-actions>
+    <span class="slider-label">Duration (s): </span>
+    <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
   </md-card-actions>
 </md-card>

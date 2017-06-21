@@ -37,25 +37,27 @@ export class ExtendedAnimationComponent implements OnChanges {
   };
 
   ngOnChanges(changes: SimpleChanges) {
-    let params: DataStatusParams;
+    let newStatus: DataStatus;
     const duration: string | null = changes['duration'] ? changes['duration'].currentValue : null;
     const opacity: OpacityType | null = changes['opacity'] ? changes['opacity'].currentValue : null;
 
-    params = { ...this.dataStatus.params };
+    if (opacity !== null) {
+      newStatus = {
+        value: 'data',
+        params: { ...this.dataStatus.params }
+      };
+      newStatus.params.start = newStatus.params.end;
+      newStatus.params.end = opacity;
+    } else {
+      newStatus = this.dataStatus;
+    }
 
     if (duration != null) {
-      params.duration = duration;
+      newStatus.params.duration = duration;
     }
 
-    if (opacity !== null) {
-      params.start = params.end;
-      params.end = opacity;
-    }
 
-    this.dataStatus = {
-      value: 'data',
-      params: params
-    };
+    this.dataStatus = newStatus;
 
   }
 

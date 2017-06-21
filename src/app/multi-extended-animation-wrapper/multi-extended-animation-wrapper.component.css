@@ -1,3 +1,10 @@
 .example-card {
   width: 300px;
 }
+
+.slider-label {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  font-style: italic;
+}

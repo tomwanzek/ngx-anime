@@ -13,12 +13,14 @@ import {
 })
 export class BasicAnimationWrapperComponent {
 
+  duration: number = 5;
+
   fadeStatus: FadeStatus = {
     value: 'in',
     params: {
       start: 0,
       end: 0.7,
-      duration: '5s'
+      duration: `${this.duration}s`
     }
   };
 
@@ -28,7 +30,7 @@ export class BasicAnimationWrapperComponent {
       params: {
         start: 0,
         end: 0.7,
-        duration: '1s'
+        duration: `${this.duration}s`
       }
     };
   }
@@ -39,9 +41,13 @@ export class BasicAnimationWrapperComponent {
       params: {
         start: 0.7,
         end: 0,
-        duration: '2s'
+        duration: `${this.duration}s`
       }
     };
   }
 
+  updateDuration(event) {
+    this.duration = event.value
+    this.fadeStatus.params.duration = `${this.duration}s`;
+  }
 }

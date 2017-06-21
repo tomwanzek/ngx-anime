@@ -11,6 +11,7 @@ import {
   MdIconModule,
   MdSidenavModule,
   MdSlideToggleModule,
+  MdSliderModule,
   MdToolbarModule
 } from '@angular/material';
 import 'hammerjs';
@@ -42,6 +43,7 @@ import { MultiExtendedAnimationComponent } from './multi-extended-animation/mult
     MdIconModule,
     MdSidenavModule,
     MdSlideToggleModule,
+    MdSliderModule,
     MdToolbarModule
   ],
   providers: [],

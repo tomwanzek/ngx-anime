@@ -9,11 +9,12 @@ import { MultiDatum } from '../multi-extended-animation/multi-extended-animation
 })
 export class MultiExtendedAnimationWrapperComponent {
 
-  duration: string = '2s';
+  duration: number = 2;
+  durationStr: string = '2s'
   setting: 1 | 2;
   multi: MultiDatum[] = [
     {
-      id: 'm1',
+      id: 'Item 1',
       opacity: 0.7,
       color: 'accent'
     }
@@ -22,12 +23,12 @@ export class MultiExtendedAnimationWrapperComponent {
   toSetting1() {
     this.multi = [
       {
-        id: 'm1',
+        id: 'Item 1',
         opacity: 0.3,
         color: 'accent'
       },
       {
-        id: 'm2',
+        id: 'Item 2',
         opacity: 0.8,
         color: 'primary'
       }
@@ -38,17 +39,17 @@ export class MultiExtendedAnimationWrapperComponent {
   toSetting2() {
     this.multi = [
       {
-        id: 'm2',
+        id: 'Item 2',
         opacity: 0.3,
         color: 'accent'
       },
       {
-        id: 'm3',
+        id: 'Item 3',
         opacity: 0.5,
         color: 'primary'
       },
       {
-        id: 'm4',
+        id: 'Item 4',
         opacity: 0.9,
         color: 'accent'
       }
@@ -57,5 +58,8 @@ export class MultiExtendedAnimationWrapperComponent {
     this.setting = 2;
   }
 
-
+  updateDuration(event) {
+    this.duration = event.value
+    this.durationStr = `${this.duration}s`;
+  }
 }

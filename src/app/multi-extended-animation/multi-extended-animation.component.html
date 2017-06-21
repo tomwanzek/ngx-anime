@@ -3,7 +3,7 @@
     Current State:
   </p>
   <md-chip-list *ngFor="let ds of dataStates; trackBy:trackById">
-    <md-chip color="primary" selected="true">{{ds.value}}</md-chip>
+    <md-chip color="primary" selected="true">{{ds.id}}</md-chip>
     <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.end}}</md-chip>
     <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.duration}}</md-chip>
   </md-chip-list>
