@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 
-import { OpacityType } from '../animations';
+import {
+  MaterialColor,
+  OpacityType
+} from '../shared';
 
 
 @Component({
@@ -13,7 +16,7 @@ export class ExtendedAnimationWrapperComponent {
   duration: number = 2;
   durationStr: string = '2s';
   opacity: OpacityType = 1;
-  color: 'accent' | 'warn' = 'accent';
+  color: MaterialColor = 'accent';
   data: 1 | 2;
 
   toData1() {

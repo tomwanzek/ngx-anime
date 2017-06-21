@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MultiDatum } from '../multi-extended-animation/multi-extended-animation.component';
+import { MultiDatum } from '../shared';
 
 
 const item2: MultiDatum = {

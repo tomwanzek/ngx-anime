@@ -7,23 +7,19 @@ import {
 } from '@angular/core';
 
 import {
-  driven,
-  DataStatus,
-  DataStatusParams,
-  OpacityType
+  driven
 } from '../animations';
 
+import {
+  MaterialColor,
+  MultiDatum,
+  OpacityType
+} from '../shared';
 
-export interface MultiDatum {
-  id: string;
-  opacity: OpacityType;
-  color: 'accent' | 'primary' | 'warn';
-}
-
-export interface ExtendedDataStatus {
+interface ExtendedDataStatus {
   id: string;
   value: 'data';
-  color: string;
+  color: MaterialColor;
   params: {
     start: OpacityType;
     end: OpacityType;
