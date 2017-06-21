@@ -9,19 +9,6 @@ import {
   useAnimation
 } from '@angular/animations';
 
-import { OpacityType } from './opacity.type';
-
-export interface DataStatusParams {
-  start: OpacityType;
-  end: OpacityType;
-  duration: string;
-}
-
-export interface DataStatus {
-  value: 'data';
-  params: DataStatusParams;
-}
-
 export const opacityAnimation = animation([
   style({
     opacity: '{{ start }}'

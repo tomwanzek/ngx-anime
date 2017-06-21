@@ -7,15 +7,19 @@ import {
 } from '@angular/core';
 
 import {
-  driven,
-  DataStatus,
-  DataStatusParams,
-  OpacityType
+  driven
 } from '../animations';
 
-export const DEFAULT_OPACITY = 1;
-export const DEFAULT_DURATION = '1s';
-export const DEFAULT_COLOR = 'accent';
+import {
+  MaterialColor,
+  Datum,
+  DatumParams,
+  OpacityType
+} from '../shared';
+
+const DEFAULT_OPACITY = 1;
+const DEFAULT_DURATION = '1s';
+const DEFAULT_COLOR: MaterialColor = 'accent';
 
 
 @Component({
@@ -28,16 +32,16 @@ export const DEFAULT_COLOR = 'accent';
 export class ExtendedAnimationComponent implements OnChanges {
 
   @Input() opacity: OpacityType;
-  @Input() color: 'accent' | 'warn' = DEFAULT_COLOR;
+  @Input() color: MaterialColor = DEFAULT_COLOR;
   @Input() duration: string = DEFAULT_DURATION;
 
-  dataStatus: DataStatus = {
+  dataStatus: Datum = {
     value: 'data',
     params: { start: 0, end: 0, duration: DEFAULT_DURATION }
   };
 
   ngOnChanges(changes: SimpleChanges) {
-    let newStatus: DataStatus;
+    let newStatus: Datum;
     const duration: string | null = changes['duration'] ? changes['duration'].currentValue : null;
     const opacity: OpacityType | null = changes['opacity'] ? changes['opacity'].currentValue : null;
 
