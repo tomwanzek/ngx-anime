@@ -12,11 +12,29 @@
         The animation uses two discrete states <b>in</b> and <b>out</b>.
       </p>
       <p class="explanation">
-        While opacity changes trigger the animation, duration changes do not trigger the animation. A changed duration will only take effect for the next animation.
+        State changes trigger the animation based on the then current opacity and duration settings.
       </p>
-      <p class="state-text">
-        Current State:
+      <h4 class="subheading">
+        Settings
+      </h4>
+      <p class="mat-caption">
+        Setting changes take effect with the next triggered transition.
       </p>
+      <div>
+        <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+        <span class="mat-caption">Duration (seconds)</span>
+      </div>
+      <div>
+        <md-slider min="0" max="1" step="0.1" thumb-label="true" [value]="inOpacity" (change)="updateInOpacity($event)"></md-slider>
+        <span class="mat-caption">Opacity (IN)</span>
+      </div>
+      <div>
+        <md-slider min="0" max="1" step="0.1" thumb-label="true" [value]="outOpacity" (change)="updateOutOpacity($event)"></md-slider>
+        <span class="mat-caption">Opacity (OUT)</span>
+      </div>
+      <h4 class="subheading">
+        Current State: {{fadeStatus.value}}
+      </h4>
       <md-chip-list>
         <md-chip color="primary" selected="true">{{fadeStatus.value}}</md-chip>
         <md-chip color="accent" selected="true" [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end">{{fadeStatus.params.end}}</md-chip>
@@ -27,9 +45,5 @@
   <md-card-actions>
     <button md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">FADE IN</button>
     <button md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">FADE OUT</button>
-  </md-card-actions>
-  <md-card-actions>
-    <span class="slider-label">Duration (seconds): </span>
-    <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
   </md-card-actions>
 </md-card>
