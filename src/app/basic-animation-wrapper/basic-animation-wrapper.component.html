@@ -1,4 +1,4 @@
-<md-card class="example-card">
+<md-card>
   <md-card-header>
     <md-card-title>Fade In/Out</md-card-title>
     <md-card-subtitle>
@@ -6,7 +6,7 @@
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <div class="card-content">
+    <div>
       <p class="explanation">
         This basic animation uses animation input parameters for element opacity and animation duration.
         The animation uses two discrete states <b>in</b> and <b>out</b>.
@@ -20,22 +20,22 @@
       <p class="mat-caption">
         Setting changes take effect with the next triggered transition.
       </p>
-      <div>
-        <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
-        <span class="mat-caption">Duration (seconds)</span>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Duration (seconds)</span>
+        <md-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
       </div>
-      <div>
-        <md-slider min="0" max="1" step="0.1" thumb-label="true" [value]="inOpacity" (change)="updateInOpacity($event)"></md-slider>
-        <span class="mat-caption">Opacity (IN)</span>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Opacity (IN)</span>
+        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="inOpacity" (change)="updateInOpacity($event)"></md-slider>
       </div>
-      <div>
-        <md-slider min="0" max="1" step="0.1" thumb-label="true" [value]="outOpacity" (change)="updateOutOpacity($event)"></md-slider>
-        <span class="mat-caption">Opacity (OUT)</span>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Opacity (OUT)</span>
+        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="outOpacity" (change)="updateOutOpacity($event)"></md-slider>
       </div>
       <h4 class="subheading">
         Current State: {{fadeStatus.value}}
       </h4>
-      <md-chip-list>
+      <md-chip-list fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center">
         <md-chip color="primary" selected="true">{{fadeStatus.value}}</md-chip>
         <md-chip color="accent" selected="true" [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end">{{fadeStatus.params.end}}</md-chip>
         <md-chip color="accent" selected="true" [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end">{{fadeStatus.params.duration}}</md-chip>

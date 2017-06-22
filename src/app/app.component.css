@@ -4,7 +4,7 @@
 }
 
 .content {
-  padding: 12px;
+  padding: 20px;
 }
 
 md-sidenav {
@@ -13,12 +13,6 @@ md-sidenav {
 
 .theme-toggle {
   margin: 10px;
-}
-
-.swatch {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px;
 }
 
 .spacer {

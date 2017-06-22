@@ -1,4 +1,4 @@
-<md-card class="example-card">
+<md-card>
   <md-card-header>
     <md-card-title>Single Item</md-card-title>
     <md-card-subtitle>
@@ -6,7 +6,7 @@
     </md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <div class="card-content">
+    <div>
       <p class="explanation">
         This animation depends on component inputs and their change detection. Animation input parameters for element <i>opacity</i> and animation <i>duration</i> have
         a continuous state space, but the animation uses only one "named" discrete state <b>data</b>. The component also accepts a <i>color</i> input, which is not animated.
@@ -20,9 +20,9 @@
       <p class="mat-caption">
         Setting changes take effect with the next triggered transition.
       </p>
-      <div>
-        <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
-        <span class="mat-caption">Duration (seconds)</span>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Duration (seconds)</span>
+        <md-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
       </div>
       <h4 class="subheading">
         Current State <span *ngIf="data">: Data {{data}}</span>

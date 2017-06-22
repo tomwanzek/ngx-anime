@@ -1,4 +1,4 @@
-<md-chip-list *ngFor="let ds of dataStates; trackBy:trackById">
+<md-chip-list fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center" *ngFor="let ds of dataStates; trackBy:trackById">
   <md-chip [color]="ds.color" selected="true">{{ds.id}}</md-chip>
   <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.end}}</md-chip>
   <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.duration}}</md-chip>
