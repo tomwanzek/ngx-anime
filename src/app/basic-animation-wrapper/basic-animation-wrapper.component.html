@@ -43,7 +43,7 @@
     </div>
   </md-card-content>
   <md-card-actions>
-    <button md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">FADE IN</button>
-    <button md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">FADE OUT</button>
+    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">Fade In</button>
+    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">Fade Out</button>
   </md-card-actions>
 </md-card>
