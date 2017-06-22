@@ -19,7 +19,7 @@
     </a>
   </md-toolbar>
 
-  <md-sidenav-container fxFlex>
+  <md-sidenav-container fxFlex (backdropClick)="sideNavOpen=false">
     <md-sidenav #sideNav mode="push" align="start">
       <md-slide-toggle class="theme-toggle" color="accent" [checked]="darkTheme" (change)="toggleDarkTheme()">
         Dark Theme
