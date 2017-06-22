@@ -14,9 +14,19 @@
       <p class="explanation">
          While opacity changes trigger the animation, duration changes do not trigger the animation. A changed duration will only take effect for the next animation.
       </p>
-      <p class="state-text">
-        Current State:
+      <h4 class="subheading">
+        Settings
+      </h4>
+      <p class="mat-caption">
+        Setting changes take effect with the next triggered transition.
       </p>
+      <div>
+        <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+        <span class="mat-caption">Duration (seconds)</span>
+      </div>
+      <h4 class="subheading">
+        Current State <span *ngIf="data">: Data {{data}}</span>
+      </h4>
       <app-extended-animation
         [opacity]="opacity"
         [duration]="durationStr"
@@ -27,9 +37,5 @@
   <md-card-actions>
     <button md-button color="primary" [disabled]="data === 1" (click)="toData1()">DATA 1</button>
     <button md-button color="primary" [disabled]="data === 2" (click)="toData2()">DATA 2</button>
-  </md-card-actions>
-  <md-card-actions>
-    <span class="slider-label">Duration (seconds): </span>
-    <md-slider min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
   </md-card-actions>
 </md-card>

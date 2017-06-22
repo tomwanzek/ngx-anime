@@ -6,13 +6,18 @@
   /*height: 300px;*/
 }
 
-.state-text {
+.subheading {
   text-align: center;
   font-style: italic;
+  font-weight: bold;
 }
 
 .explanation {
   text-align: justify;
+}
+
+.current-state {
+  text-align: center;
 }
 
 md-chip {
@@ -21,10 +26,6 @@ md-chip {
   text-align: center;
 }
 
-.slider-label {
-  margin-left: 10px;
-  margin-right: 5px;
-  font-size: 14px;
-  font-style: italic;
+.mat-card>.mat-card-actions {
+  text-align: center;
 }
-

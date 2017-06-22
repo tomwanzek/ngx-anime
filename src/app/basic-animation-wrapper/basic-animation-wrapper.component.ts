@@ -14,40 +14,83 @@ import {
 export class BasicAnimationWrapperComponent {
 
   duration = 5;
+  inOpacity = 0.9;
+  outOpacity = 0.1;
+  fadeStatus: FadeStatus;
 
-  fadeStatus: FadeStatus = {
-    value: 'in',
-    params: {
-      start: 0,
-      end: 0.7,
-      duration: `${this.duration}s`
-    }
-  };
+  private inStatus: FadeStatus;
 
-  toInState() {
+  private outStatus: FadeStatus;
+
+  constructor() {
+    this.inStatus = {
+      value: 'in',
+      params: {
+        start: this.outOpacity,
+        end: this.inOpacity,
+        duration: `${this.duration}s`
+      }
+    };
+    this.outStatus = {
+      value: 'out',
+      params: {
+        start: this.inOpacity,
+        end: this.outOpacity,
+        duration: `${this.duration}s`
+      }
+    };
     this.fadeStatus = {
       value: 'in',
       params: {
         start: 0,
-        end: 0.7,
+        end: this.inOpacity,
         duration: `${this.duration}s`
       }
     };
+  }
+
+  toInState() {
+    this.fadeStatus = this.inStatus;
   }
 
   toOutState() {
-    this.fadeStatus = {
-      value: 'out',
-      params: {
-        start: 0.7,
-        end: 0,
-        duration: `${this.duration}s`
-      }
-    };
+    this.fadeStatus = this.outStatus;
+  }
+
+  updateInOpacity(event) {
+    this.inOpacity  = event.value;
+    this.refreshStatuses();
+  }
+
+  updateOutOpacity(event) {
+    this.outOpacity  = event.value;
+    this.refreshStatuses();
   }
 
   updateDuration(event) {
-    this.duration = event.value
-    this.fadeStatus.params.duration = `${this.duration}s`;
+    this.duration = event.value;
+    const durationStr = `${this.duration}s`;
+    this.inStatus.params.duration = durationStr;
+    this.outStatus.params.duration = durationStr;
+    this.fadeStatus.params.duration = durationStr;
+  }
+
+  private refreshStatuses() {
+    this.inStatus = {
+      value: 'in',
+      params: {
+        start: this.outOpacity,
+        end: this.inOpacity,
+        duration: `${this.duration}s`
+      }
+    };
+    this.outStatus = {
+      value: 'out',
+      params: {
+        start: this.inOpacity,
+        end: this.outOpacity,
+        duration: `${this.duration}s`
+      }
+    };
   }
 }
