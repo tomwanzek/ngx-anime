@@ -8,8 +8,8 @@
   <md-card-content>
     <div>
       <p class="explanation">
-        This basic animation uses animation input parameters to control the opacity and size of an SVG circle, respectively, as well as the animation duration.
-        The animation uses two discrete states <b>in</b> and <b>out</b>. The <i>value</i> setting controls the opacity and also drives the fraction of the circles full radius.
+        This basic animation uses animation input parameters to control the opacity and size of an SVG circle, respectively, as well
+        as the animation duration. The animation uses two discrete states <b>in</b> and <b>out</b>. The <i>value</i>        setting controls the opacity and also drives the fraction of the circles full radius.
       </p>
       <p class="explanation">
         State changes trigger the animation based on the then current value and duration settings.
@@ -35,22 +35,14 @@
       <h4 class="subheading">
         Current State: {{fadeStatus.value}}
       </h4>
-      <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
-        <circle
-          [attr.cx]="fullRadius"
-          [attr.cy]="fullRadius"
-          [attr.r]="fullRadius"
-          [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end"
-        ></circle>
-      </svg>
-      <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
-        <circle
-          [attr.cx]="fullRadius"
-          [attr.cy]="fullRadius"
-          [@sizeBasic]="sizeStatus"
-          [attr.r]="sizeStatus.params.numEndRadius"
-        ></circle>
-      </svg>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
+          <circle [attr.cx]="fullRadius" [attr.cy]="fullRadius" [attr.r]="fullRadius" [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end"></circle>
+        </svg>
+        <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
+          <circle [attr.cx]="fullRadius" [attr.cy]="fullRadius" [@sizeBasic]="sizeStatus" [attr.r]="sizeStatus.params.numEndRadius"></circle>
+        </svg>
+      </div>
     </div>
   </md-card-content>
   <md-card-actions>
