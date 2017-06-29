@@ -12,6 +12,7 @@ import {
   MdSidenavModule,
   MdSlideToggleModule,
   MdSliderModule,
+  MdTabsModule,
   MdToolbarModule
 } from '@angular/material';
 import 'hammerjs';
@@ -22,6 +23,7 @@ import { ExtendedAnimationWrapperComponent } from './extended-animation-wrapper/
 import { ExtendedAnimationComponent } from './extended-animation/extended-animation.component';
 import { MultiExtendedAnimationWrapperComponent } from './multi-extended-animation-wrapper/multi-extended-animation-wrapper.component';
 import { MultiExtendedAnimationComponent } from './multi-extended-animation/multi-extended-animation.component';
+import { BasicSvgAnimationWrapperComponent } from './basic-svg-animation-wrapper/basic-svg-animation-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { MultiExtendedAnimationComponent } from './multi-extended-animation/mult
     ExtendedAnimationWrapperComponent,
     ExtendedAnimationComponent,
     MultiExtendedAnimationWrapperComponent,
-    MultiExtendedAnimationComponent
+    MultiExtendedAnimationComponent,
+    BasicSvgAnimationWrapperComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { MultiExtendedAnimationComponent } from './multi-extended-animation/mult
     MdSidenavModule,
     MdSlideToggleModule,
     MdSliderModule,
+    MdTabsModule,
     MdToolbarModule
   ],
   providers: [],

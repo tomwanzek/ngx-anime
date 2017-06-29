@@ -1,6 +1,6 @@
 export interface FadeStatusParameters {
-  start?: number |'inherit';
-  end?: number |'inherit';
+  start?: number;
+  end?: number;
   duration?: string;
 };
 

@@ -1,0 +1,52 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>Fade In/Out</md-card-title>
+    <md-card-subtitle>
+      A basic animation using input parameters.
+    </md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    <div>
+      <p class="explanation">
+        This basic animation uses animation input parameters to control the opacity and size of an SVG circle, respectively, as well
+        as the animation duration. The animation uses two discrete states <b>in</b> and <b>out</b>. The <i>value</i>        setting controls the opacity and also drives the fraction of the circles full radius.
+      </p>
+      <p class="explanation">
+        State changes trigger the animation based on the then current value and duration settings.
+      </p>
+      <h4 class="subheading">
+        Settings
+      </h4>
+      <p class="mat-caption">
+        Setting changes take effect with the next triggered transition.
+      </p>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Duration (seconds)</span>
+        <md-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Value (IN)</span>
+        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="inValue" (change)="updateInValue($event)"></md-slider>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="30" class="mat-caption">Value (OUT)</span>
+        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="outValue" (change)="updateOutValue($event)"></md-slider>
+      </div>
+      <h4 class="subheading">
+        Current State: {{fadeStatus.value}}
+      </h4>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
+          <circle [attr.cx]="fullRadius" [attr.cy]="fullRadius" [attr.r]="fullRadius" [@fadeBasic]="fadeStatus" [style.opacity]="fadeStatus.params.end"></circle>
+        </svg>
+        <svg [attr.width]="fullDiameter" [attr.height]="fullDiameter">
+          <circle [attr.cx]="fullRadius" [attr.cy]="fullRadius" [@sizeBasic]="sizeStatus" [attr.r]="sizeStatus.params.numEndRadius"></circle>
+        </svg>
+      </div>
+    </div>
+  </md-card-content>
+  <md-card-actions>
+    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">Fade In</button>
+    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">Fade Out</button>
+  </md-card-actions>
+</md-card>
