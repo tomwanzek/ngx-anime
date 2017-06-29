@@ -1,0 +1,22 @@
+.subheading {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.explanation {
+  text-align: justify;
+}
+
+.current-state {
+  text-align: center;
+}
+
+.mat-card>.mat-card-actions {
+  text-align: center;
+}
+
+circle {
+  stroke: none;
+  fill: slateblue;
+}
