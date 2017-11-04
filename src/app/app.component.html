@@ -1,43 +1,43 @@
 <div fxLayout="column" fxFlex [class.sharp-dark-theme]="darkTheme" [class.d3ess-dark-theme]="darkTheme">
 
-  <md-toolbar color="primary">
-    <button *ngIf="!sideNavOpen" md-icon-button (click)="sideNav.open(); sideNavOpen=true">
-        <md-icon>menu</md-icon>
+  <mat-toolbar color="primary">
+    <button *ngIf="!sideNavOpen" mat-icon-button (click)="sideNav.open(); sideNavOpen=true">
+        <mat-icon>menu</mat-icon>
       </button>
-    <button *ngIf="sideNavOpen" md-icon-button (click)="sideNav.close(); sideNavOpen=false">
-        <md-icon>close</md-icon>
+    <button *ngIf="sideNavOpen" mat-icon-button (click)="sideNav.close(); sideNavOpen=false">
+        <mat-icon>close</mat-icon>
       </button>
     <span>
       {{title}}
     </span>
     <span class="spacer"></span>
-    <a class="uppercase" href="https://github.com/tomwanzek/ngx-anime" md-button="">
+    <a class="uppercase" href="https://github.com/tomwanzek/ngx-anime" mat-button="">
       <span class="mat-button-wrapper">
         <img src="assets/github/PNG/GitHub-Mark-32px.png" width="24px" height="24px"/>
         Github
       </span>
     </a>
-  </md-toolbar>
+  </mat-toolbar>
 
-  <md-sidenav-container fxFlex (backdropClick)="sideNavOpen=false">
-    <md-sidenav #sideNav mode="push" align="start">
-      <md-slide-toggle class="theme-toggle" color="accent" [checked]="darkTheme" (change)="toggleDarkTheme()">
+  <mat-sidenav-container fxFlex (backdropClick)="sideNavOpen=false">
+    <mat-sidenav #sideNav mode="push" align="start">
+      <mat-slide-toggle class="theme-toggle" color="accent" [checked]="darkTheme" (change)="toggleDarkTheme()">
         Dark Theme
-      </md-slide-toggle>
-    </md-sidenav>
-    <md-tab-group>
-      <md-tab label="HTML">
+      </mat-slide-toggle>
+    </mat-sidenav>
+    <mat-tab-group>
+      <mat-tab label="HTML">
         <div class="content" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign="space-around stretch">
           <app-basic-animation-wrapper fxFlex="33"></app-basic-animation-wrapper>
           <app-extended-animation-wrapper fxFlex="33"></app-extended-animation-wrapper>
           <app-multi-extended-animation-wrapper fxFlex="33"></app-multi-extended-animation-wrapper>
         </div>
-      </md-tab>
-      <md-tab label="SVG">
+      </mat-tab>
+      <mat-tab label="SVG">
         <div class="content" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" fxLayoutAlign="space-around stretch">
           <app-basic-svg-animation-wrapper fxFlex="33"></app-basic-svg-animation-wrapper>
         </div>
-      </md-tab>
-    </md-tab-group>
-  </md-sidenav-container>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-sidenav-container>
 </div>

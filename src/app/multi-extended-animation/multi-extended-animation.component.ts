@@ -24,7 +24,7 @@ interface ExtendedDataStatus {
     start: OpacityType;
     end: OpacityType;
     duration: string;
-  }
+  };
 }
 
 @Component({
@@ -53,8 +53,8 @@ export class MultiExtendedAnimationComponent implements OnChanges {
       const previousId2Index: { [key: string]: number } = {};
       const dataStatesId2Index: { [key: string]: number } = {};
 
-      previousMulti.forEach((m, i) => { previousId2Index[m.id] = i });
-      this.dataStates.forEach((ds, i) => { dataStatesId2Index[ds.id] = i });
+      previousMulti.forEach((m, i) => { previousId2Index[m.id] = i; });
+      this.dataStates.forEach((ds, i) => { dataStatesId2Index[ds.id] = i; });
       eds = currentMulti.map<ExtendedDataStatus>(m => {
         const id: string = m.id;
         let ds: ExtendedDataStatus;
@@ -73,7 +73,7 @@ export class MultiExtendedAnimationComponent implements OnChanges {
                 end: m.opacity,
                 duration: duration ? duration : this.duration
               }
-            }
+            };
           }
         } else {
           ds = {
@@ -85,7 +85,7 @@ export class MultiExtendedAnimationComponent implements OnChanges {
               end: m.opacity,
               duration: duration ? duration : this.duration
             }
-          }
+          };
         }
         return ds;
       });

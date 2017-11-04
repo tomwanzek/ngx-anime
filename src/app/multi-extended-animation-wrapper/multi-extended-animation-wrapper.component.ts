@@ -49,7 +49,7 @@ const data3: MultiDatum[] = [
 export class MultiExtendedAnimationWrapperComponent {
 
   duration = 2;
-  durationStr = '2s'
+  durationStr = '2s';
   data: 1 | 2 | 3;
   multi: MultiDatum[];
 
@@ -75,7 +75,7 @@ export class MultiExtendedAnimationWrapperComponent {
   }
 
   updateDuration(event) {
-    this.duration = event.value
+    this.duration = event.value;
     this.durationStr = `${this.duration}s`;
   }
 }

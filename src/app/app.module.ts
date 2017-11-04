@@ -5,15 +5,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
-  MdButtonModule,
-  MdCardModule,
-  MdChipsModule,
-  MdIconModule,
-  MdSidenavModule,
-  MdSlideToggleModule,
-  MdSliderModule,
-  MdTabsModule,
-  MdToolbarModule
+  MatButtonModule,
+  MatCardModule,
+  MatChipsModule,
+  MatIconModule,
+  MatSidenavModule,
+  MatSlideToggleModule,
+  MatSliderModule,
+  MatTabsModule,
+  MatToolbarModule
 } from '@angular/material';
 import 'hammerjs';
 
@@ -40,15 +40,15 @@ import { BasicSvgAnimationWrapperComponent } from './basic-svg-animation-wrapper
     FormsModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MdButtonModule,
-    MdCardModule,
-    MdChipsModule,
-    MdIconModule,
-    MdSidenavModule,
-    MdSlideToggleModule,
-    MdSliderModule,
-    MdTabsModule,
-    MdToolbarModule
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatSliderModule,
+    MatTabsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

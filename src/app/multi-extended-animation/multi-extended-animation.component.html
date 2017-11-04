@@ -1,5 +1,5 @@
-<md-chip-list fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center" *ngFor="let ds of dataStates; trackBy:trackById">
-  <md-chip [color]="ds.color" selected="true">{{ds.id}}</md-chip>
-  <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.end}}</md-chip>
-  <md-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.duration}}</md-chip>
-</md-chip-list>
+<mat-chip-list fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center" *ngFor="let ds of dataStates; trackBy:trackById">
+  <mat-chip [color]="ds.color" selected="true">{{ds.id}}</mat-chip>
+  <mat-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.end}}</mat-chip>
+  <mat-chip [color]="ds.color" selected="true" [@driven]="ds" [style.opacity]="ds.params.end">{{ds.params.duration}}</mat-chip>
+</mat-chip-list>

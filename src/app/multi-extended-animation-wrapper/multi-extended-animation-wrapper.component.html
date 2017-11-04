@@ -1,11 +1,11 @@
-<md-card class>
-  <md-card-header>
-    <md-card-title>Multiple Items</md-card-title>
-    <md-card-subtitle>
+<mat-card class>
+  <mat-card-header>
+    <mat-card-title>Multiple Items</mat-card-title>
+    <mat-card-subtitle>
       Another animation driven by component input.
-    </md-card-subtitle>
-  </md-card-header>
-  <md-card-content>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
     <div>
       <p class="explanation">
         This animation depends on component inputs and their change detection. Animation input parameters for element <i>opacity</i> and animation <i>duration</i> have
@@ -26,7 +26,7 @@
       </p>
       <div fxLayout="row" fxLayoutAlign="center center">
         <span fxFlex="30" class="mat-caption">Duration (seconds)</span>
-        <md-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+        <mat-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></mat-slider>
       </div>
       <h4 class="subheading">
         Current State <span *ngIf="data">: Data {{data}}</span>
@@ -36,10 +36,10 @@
         [duration]="durationStr"
       ></app-multi-extended-animation>
     </div>
-  </md-card-content>
-  <md-card-actions>
-    <button class="uppercase" md-button color="primary" [disabled]="data === 1" (click)="toData1()">Data 1</button>
-    <button class="uppercase" md-button color="primary" [disabled]="data === 2" (click)="toData2()">Data 2</button>
-    <button class="uppercase" md-button color="primary" [disabled]="data === 3" (click)="toData3()">Data 3</button>
-  </md-card-actions>
-</md-card>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="uppercase" mat-button color="primary" [disabled]="data === 1" (click)="toData1()">Data 1</button>
+    <button class="uppercase" mat-button color="primary" [disabled]="data === 2" (click)="toData2()">Data 2</button>
+    <button class="uppercase" mat-button color="primary" [disabled]="data === 3" (click)="toData3()">Data 3</button>
+  </mat-card-actions>
+</mat-card>

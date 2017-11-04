@@ -6,5 +6,5 @@ export interface FadeStatusParameters {
 
 export interface FadeStatus {
   value: 'in' | 'out';
-  params: FadeStatusParameters
+  params: FadeStatusParameters;
 }

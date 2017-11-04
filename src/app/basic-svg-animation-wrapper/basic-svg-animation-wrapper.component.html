@@ -1,11 +1,11 @@
-<md-card>
-  <md-card-header>
-    <md-card-title>Fade In/Out</md-card-title>
-    <md-card-subtitle>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Fade In/Out</mat-card-title>
+    <mat-card-subtitle>
       A basic animation using input parameters.
-    </md-card-subtitle>
-  </md-card-header>
-  <md-card-content>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
     <div>
       <p class="explanation">
         This basic animation uses animation input parameters to control the opacity and size of an SVG circle, respectively, as well
@@ -22,15 +22,15 @@
       </p>
       <div fxLayout="row" fxLayoutAlign="center center">
         <span fxFlex="30" class="mat-caption">Duration (seconds)</span>
-        <md-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></md-slider>
+        <mat-slider fxFlex="50" min="1" max="10" step="1" thumb-label="true" [value]="duration" (change)="updateDuration($event)"></mat-slider>
       </div>
       <div fxLayout="row" fxLayoutAlign="center center">
         <span fxFlex="30" class="mat-caption">Value (IN)</span>
-        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="inValue" (change)="updateInValue($event)"></md-slider>
+        <mat-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="inValue" (change)="updateInValue($event)"></mat-slider>
       </div>
       <div fxLayout="row" fxLayoutAlign="center center">
         <span fxFlex="30" class="mat-caption">Value (OUT)</span>
-        <md-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="outValue" (change)="updateOutValue($event)"></md-slider>
+        <mat-slider fxFlex="50" min="0" max="1" step="0.1" thumb-label="true" [value]="outValue" (change)="updateOutValue($event)"></mat-slider>
       </div>
       <h4 class="subheading">
         Current State: {{fadeStatus.value}}
@@ -44,9 +44,9 @@
         </svg>
       </div>
     </div>
-  </md-card-content>
-  <md-card-actions>
-    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">Fade In</button>
-    <button class="uppercase" md-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">Fade Out</button>
-  </md-card-actions>
-</md-card>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="uppercase" mat-button color="primary" [disabled]="fadeStatus.value === 'in'" (click)="toInState()">Fade In</button>
+    <button class="uppercase" mat-button color="primary" [disabled]="fadeStatus.value === 'out'" (click)="toOutState()">Fade Out</button>
+  </mat-card-actions>
+</mat-card>

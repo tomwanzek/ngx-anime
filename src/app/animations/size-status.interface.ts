@@ -7,5 +7,5 @@ export interface SizeStatusParameters {
 
 export interface SizeStatus {
   value: 'shrink' | 'grow';
-  params: SizeStatusParameters
+  params: SizeStatusParameters;
 }
