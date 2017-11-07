@@ -2,7 +2,8 @@ import { browser, by, element } from 'protractor';
 
 // TODO: Updated tests
 
-export class NgxAnimePage {
+
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }

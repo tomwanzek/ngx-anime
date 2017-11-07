@@ -1,14 +1,14 @@
-import { NgxAnimePage } from './app.po';
+import { AppPage } from './app.po';
 
 xdescribe('ngx-anime App', () => {
-  let page: NgxAnimePage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new NgxAnimePage();
+    page = new AppPage();
   });
 
   xit('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

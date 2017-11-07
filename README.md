@@ -1,7 +1,7 @@
 # Ngx Anime
 
 This repo contains a slightly-more-than-minimally viable demo of Angular animation using input parameters.
-It relies on features introduced with Angular 4.2.
+It relies on features first introduced with Angular 4.2.
 
 A live demo can be found at [tomwanzek.github.io/ngx-anime](https://tomwanzek.github.io/ngx-anime/)
 
@@ -26,7 +26,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
